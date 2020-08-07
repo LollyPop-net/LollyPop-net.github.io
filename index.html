@@ -3,6 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <title>Hello World!</title>
+    </style>
+            #img {
+                    border-radius: 50%;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -150px;
+                    margin-left: -150px;
+                 }
+    <style>
+    </script language='JavaScript'>
+             var rotateVal = 0
+             var InterVal = 0
+             window.onload = function() {
+                     rotate()
+                     document.getElementById('img').onmousemove = function() {
+                             clearInterVal(InterVal)
+                     }
+                     document.getElementById('img').onmousemove = function() {
+                             rotate()
+                     }
+             }
+             function rotate() {
+                     InterVal = setInterVal(function() {
+                             var img = document.getElementById('img')
+                             rotateVal += 1
+                             img.style.transform = 'rotate(' + rotateVal + 'deg)'
+                             ing.style.transform = '0.1s lineae'
+                     },100)
+             }
+    <script>
   </head>
   <body>
     <h1>Welcome to my first Web Page</h1>
