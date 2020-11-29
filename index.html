@@ -1,59 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Plusky</title>
-    <style>
-            #img_rotate {
-                    border-radius: 50%;
-                    cursor: pointer;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    margin-top: -150px;
-                    margin-left: -150px;
-            }
-            .question-content .btn-wrap .next[data-v-a56eacb2] {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    color: #fff;
-                    width: 160px;
-                    height: 42px;
-                    line-height: 42px;
-                    font-size: 16px;
-                    border-radius: 4px;
-                    text-align: center;
-                    cursor: pointer;
-                    letter-spacing: 1px;
-            }
-    </style>
-    <script>
-             var rotateVal = 0
-             var InterVal = 0
-             window.onload = function() {
-                     rotate()
-                     document.getElementById('img_rotate').onmousemove = function() {
-                             clearInterVal(InterVal)
-                     }
-                     document.getElementById('img_rotate').onmousemove = function() {
-                             rotate()
-                     }
-             }
-             function rotate() {
-                     InterVal = setInterVal(function() {
-                             var img = document.getElementById('img_rotate')
-                             rotateVal += 1
-                             img.style.transform = 'rotate(' + rotateVal + 'deg)'
-                             ing.style.transform = '0.1s lineae'
-                     },100)
-             }
-    </script>
-  </head>
-  <body>
-    <h1>Welcome to my first Web Page</h1>
-    <p1> HCPJ-lab ©️ 2020 Plusky Inc.</p1>
-    <p2> All rights reserved </p2>
-    <p3 data-v-a56eacb2 class="next" style="background: linear-gradient(135deg, rgb(70, 228, 228) 0%, rgb(27, 191, 191) 100%); box-shadow: rgba(27, 191, 191, 0.3) 0px 6px 12px 0px; left: 220px;">join us</p3>
-  </body>
-</html>
+<head>
+<meta charset="gb2312" />
+<title>css 3 transform rotate</title>
+<style>
+a img{ border:none}
+</style>
+</head>
+ 
+<body>
+<div id="rotate" style=" cursor:pointer; position:absolute; left:100px; top:100px">
+<a href="https://lollypop-net.github.io/"><img src="https://icweiliimg1.pstatp.com/weili/bl/492758084694573223.jpg" /></a><img src="https://icweiliimg1.pstatp.com/weili/bl/492758084694573223.jpg" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+ 
+</div>
+<script>
+(function(){
+var element = document.getElementById("rotate");
+var r = 0;
+var i = 1;
+function rotate(){
+	r += i;
+	if( Math.abs(r) >= 25 ) i*=-1
+	element.style.MozTransform = "rotate(" + r + "deg)";
+	element.style.webkitTransform ="rotate(" + r + "deg)";
+	element.style.msTransform = "rotate(" + r + "deg)";
+	element.style.OTransform = "rotate(" + r + "deg)";
+	element.style.transform = "rotate(" + r + "deg)";
+}
+ 
+var timer = setInterval(rotate,50);
+ 
+element.onmouseover = function(){
+	clearInterval(timer);
+	timer = null;
+};
+ 
+element.onmouseout = function(){
+	if(timer)return;
+	timer = setInterval(rotate,30);
+};
+}());
+</script>
+</body>
+</html> 
