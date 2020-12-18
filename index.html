@@ -1,45 +1,31 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 <head>
-<meta charset="gb2312" />
-<title>css 3 transform rotate</title>
-<style>
-a img{ border:none}
+<meta charSet="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.8.0/jquery-1.8.0.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+<link rel="stylesheet" herf="https://cdn.bootcdn.net/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css">
+<style type="text/css">
 </style>
 </head>
- 
 <body>
-<div id="rotate" style=" cursor:pointer; position:absolute; left:100px; top:100px">
-<a href="https://lollypop-net.github.io/"><img src="https://icweiliimg1.pstatp.com/weili/bl/492758084694573223.jpg" width="100px" height="100px" border="0" alt="" style="border:none !important; margin:0px !important;"/></a>
- 
+<div data-role="page">
+	<div data-role="header">
+		<h1>页面头部</h1>
+	</div>
+	<div data-role="main">
+		<a id="tap" herf="#" data-role="button">触摸我会触发事件</a>
+		<p class="content"></p>
+	</div>
+	<div data-role="fotter">
+		<h1>PaperChat Inc.</h1>
+	</div>
 </div>
 <script>
-(function(){
-var element = document.getElementById("rotate");
-var r = 0;
-var i = 1;
-function rotate(){
-	r += i;
-	if( Math.abs(r) >= 25 ) i*=-1
-	element.style.MozTransform = "rotate(" + r + "deg)";
-	element.style.webkitTransform ="rotate(" + r + "deg)";
-	element.style.msTransform = "rotate(" + r + "deg)";
-	element.style.OTransform = "rotate(" + r + "deg)";
-	element.style.transform = "rotate(" + r + "deg)";
-}
- 
-var timer = setInterval(rotate,50);
- 
-element.onmouseover = function(){
-	clearInterval(timer);
-	timer = null;
-};
- 
-element.onmouseout = function(){
-	if(timer)return;
-	timer = setInterval(rotate,30);
-};
-}());
+$("#tap").on("tap",function(){
+	$(".content").html("Welcome to Paperchat!")
+})
 </script>
 </body>
-</html> 
+</html>
