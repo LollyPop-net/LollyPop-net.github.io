@@ -14,9 +14,8 @@
   </div>
 
   <div data-role="content">
-    <p>页面内容</p>
-    <a id="tick" herf="#" data-role="button">touch me!</a>
-    <p class="show"></p>
+    <a id="tap" herf="#" data-role="button">touch me!</a>
+    <p class="content"></p>
   </div>
 
   <div data-role="footer">
@@ -24,8 +23,8 @@
   </div>
 </div>
 <script>
-$("#tick").on("tick",function(){
-	$(".show").html("Welcome to Paperchat!")
+$("#tap").on("tap",function(){
+	$(".content").html("Welcome to Paperchat!")
 })
 </script>
 </body>
