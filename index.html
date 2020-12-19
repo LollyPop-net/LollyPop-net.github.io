@@ -14,7 +14,7 @@
   </div>
 
   <div data-role="content">
-    <a id="tap" herf="#" data-icon="flat-new" data-iconpos="bottom" data-role="button">Subscribe</a>
+    <a id="tap" herf="#" class="ui-btn ui-btn-inline ui-icon-search ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" data-role="button">Subscribe</a>
   </div>
 
   <div data-role="footer">
@@ -23,7 +23,7 @@
 </div>
 <script>
 $("#tap").on("taphold",function(e){
-	$(e.target).addClass('ui-btn-d');
+	$(e.target).addClass('ui-btn-b');
 	alert("subscribe sceccess!")
 })
 </script>
