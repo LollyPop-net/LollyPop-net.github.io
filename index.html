@@ -14,8 +14,7 @@
   </div>
 
   <div data-role="content">
-    <a id="tap" herf="#" data-role="button">subscribe</a>
-    <p class="content"></p>
+    <a id="tap" herf="#" data-role="button">Subscribe</a>
   </div>
 
   <div data-role="footer">
@@ -23,9 +22,9 @@
   </div>
 </div>
 <script>
-$("#tap").on("tap",function(e){
-	alert("subscribe sceccess!")
+$("#tap").on("taphold",function(e){
 	$(e.target).addClass('ui-btn-b');
+	alert("subscribe sceccess!")
 })
 </script>
 </body>
