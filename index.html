@@ -8,7 +8,67 @@
 </head>
 <body>
 <style>
-	#btn-subscribe ui-icon{background:url(../btn-subscirbe.png) no-repeat 0 50%;background-size:50px 50px;}
+		.routate{
+		width: 100px;
+		height:100px;
+		background:brown;
+		position:relative;
+		margin:0 auto;
+		margin-top: 300px;
+
+    		border-radius: 15px;
+    		-moz-border-radius: 15px;
+    		-webkit-border-radius: 15px;
+   	 	-o-border-radius: 15px;
+
+		animation-name:mymove;
+		-moz-animation-name:mymove;
+		-webkit-animation-name:mymove;
+		-o-animation-name:mymove;
+
+		animation-duration:5s;
+		-moz-animation-duration:5s;
+		-webkit-animation-duration:5s;
+		-o-animation-duration:5s;
+
+		animation-time-function:ease-in-out;
+		-moz-animation-time-function:ease-in-out;
+		-webkit-animation-time-function:ease-in-out;
+		-o-animation-time-function:ease-in-out;
+
+		animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+	}
+	@keyframes mymove{
+		0%    {background: orange;transform: rotate(30deg) scale(4);}
+		25%  {background: yellow;transform: rotate(90deg) scale(2);}
+		50%  {background: pink;transform: rotate(-120deg) scale(1);}
+		75%  {background: skyblue;transform: rotate(-45deg) scale(0.5);}
+		100%{background: orange;transform: rotate(30deg) scale(4);}
+	}
+	@-webkit-keyframes mymove{
+		0%    {background: orange;transform: rotate(30deg) scale(4);}
+		25%  {background: yellow;transform: rotate(90deg) scale(2);}
+		50%  {background: pink;transform: rotate(-120deg) scale(1);}
+		75%  {background: skyblue;transform: rotate(-45deg) scale(0.5);}
+		100%{background: orange;transform: rotate(30deg) scale(4);}
+	}	
+	@-moz-keyframes mymove{
+		0%    {background: orange;transform: rotate(30deg) scale(4);}
+		25%  {background: yellow;transform: rotate(90deg) scale(2);}
+		50%  {background: pink;transform: rotate(-120deg) scale(1);}
+		75%  {background: skyblue;transform: rotate(-45deg) scale(0.5);}
+		100%{background: orange;transform: rotate(30deg) scale(4);}
+	}
+	@-o-keyframes mymove{
+		0%    {background: orange;transform: rotate(30deg) scale(4);}
+		25%  {background: yellow;transform: rotate(90deg) scale(2);}
+		50%  {background: pink;transform: rotate(-120deg) scale(1);}
+		75%  {background: skyblue;transform: rotate(-45deg) scale(0.5);}
+		100%{background: orange;transform: rotate(30deg) scale(4);}
+	}
 </style>
 <div data-role="page" id="pageone">
   <div data-role="header">
@@ -16,7 +76,7 @@
   </div>
 
   <div data-role="content">
-    <a id="tap btn-subscribe" herf="#" data-icon="custom" data-role="button">Subscribe</a>
+    <a id="tap" herf="#" data-role="button">Subscribe</a>
   </div>
 
   <div data-role="footer">
@@ -25,7 +85,7 @@
 </div>
 <script>
 $("#tap").on("taphold",function(e){
-	$(e.target).addClass('ui-btn-b');
+	$(e.target).addClass('routate');
 	alert("subscribe sceccess!")
 })
 </script>
