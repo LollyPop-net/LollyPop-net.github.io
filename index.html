@@ -17,13 +17,13 @@
   <div data-role="content">
     <ul data-role="listview">
 	    <li>
-		    <a id="list-slide" herf="#">program1</a>
+		    <a herf="#">program1</a>
 	    </li>
 	    <li>
-		    <a id="list-slide" herf="#">program2</a>
+		    <a herf="#">program2</a>
 	    </li>
 	    <li>
-		    <a id="list-slide" herf="#">program2</a>
+		    <a herf="#">program2</a>
 	    </li>
   </div>
 
@@ -35,7 +35,7 @@
 $("#tap").on("taphold",function(e){
 	$(e.target).addClass('routate');
 	alert("subscribe sceccess!")
-$("#list-slide").on("swipe",function(e){
+$("[data-role='page']").on('swipe',function(e){
 	$("[data-role='page']").css("background","blue");
 })
 </script>
